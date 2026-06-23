@@ -179,6 +179,12 @@ window.allLevels = [
 	    "level_56199846",
 	    ["Unzor", "DjHoneyb"]
     ],
+	[
+        "spectre",
+	    "Spectre",
+	    "level_130709307",
+	    ["800MC", "AlanWalker"]
+    ],
 	/*
     [
         "stereo_madness",
