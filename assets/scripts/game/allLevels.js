@@ -180,7 +180,7 @@ window.allLevels = [
 	    ["Unzor", "DjHoneyb"]
     ],
 	[
-        "Spectre",
+        "spectre",
 	    "Spectre",
 	    "level_130709307",
 	    ["800MC", "AlanWalker"]
