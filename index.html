@@ -2,22 +2,30 @@
 
 <script>
 function createSiteButtons(container, sites) {
-  container.replaceChildren();
+  const group = document.createElement("nav");
+  group.className = "button-group";
+  group.setAttribute("aria-label", "Choose a site");
 
   for (const site of sites) {
-    const button = document.createElement("button");
-    button.textContent = site.label;
-
-    button.addEventListener("click", () => {
-      window.location.href = site.url;
-    });
-
-    container.appendChild(button);
+    const link = document.createElement("a");
+    link.className = "site-button";
+    link.href = site.url;
+    link.textContent = site.label;
+    group.append(link);
   }
+
+  container.replaceChildren(group);
 }
 
 createSiteButtons(document.querySelector("#site-buttons"), [
   { label: "Example", url: "https://example.com" },
-  { label: "Wikipedia", url: "https://wikipedia.org" }
+  { label: "News", url: "https://news.example.com" }
 ]);
 </script>
+
+<style>
+.button-group { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.site-button {
+  padding: 0.65rem 1rem;
+  border-radius: 0.4rem;
+  background: #2457...
