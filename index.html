@@ -1,0 +1,23 @@
+<div id="site-buttons"></div>
+
+<script>
+function createSiteButtons(container, sites) {
+  container.replaceChildren();
+
+  for (const site of sites) {
+    const button = document.createElement("button");
+    button.textContent = site.label;
+
+    button.addEventListener("click", () => {
+      window.location.href = site.url;
+    });
+
+    container.appendChild(button);
+  }
+}
+
+createSiteButtons(document.querySelector("#site-buttons"), [
+  { label: "Example", url: "https://example.com" },
+  { label: "Wikipedia", url: "https://wikipedia.org" }
+]);
+</script>
